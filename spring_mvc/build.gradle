@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'idea'
+
+group = 'com.chegg.poc'
+
+jettyRun { httpPort = 8093 }
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'com.sun.jersey:jersey-bundle:1.6',
+			'com.sun.jersey:jersey-json:1.6',
+			'javax.servlet:jstl:1.2',
+			'org.springframework:spring-context:3.0.6.RELEASE',
+			'org.springframework:spring-webmvc:3.0.6.RELEASE'
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userWeb>
+	<jvmConfig xmlns="http://faban.sunsource.net/ns/fabanharness">
+		<javaHome>/usr/lib/jvm/java-6-sun</javaHome>
+		<jvmOptions>-Xmx512m -Xms128m -XX:+DisableExplicitGC</jvmOptions>
+	</jvmConfig>
+	<!-- The definition binds the config file with the benchmark class -->
+	<!-- We declare the driver as the default namespace 'cause it is most common here -->
+	<fa:runConfig definition="com.chegg.poc.bench.user.UserWebDriver"
+					  xmlns:fa="http://faban.sunsource.net/ns/faban"
+					  xmlns:fh="http://faban.sunsource.net/ns/fabanharness"
+					  xmlns="http://faban.sunsource.net/ns/fabandriver">
+		<fh:description>User webapp Benchmark</fh:description>
+		<!-- The hostConfig section is used by the harness to control hosts -->
+		<fa:hostConfig>
+			<fa:host>localhost</fa:host>
+			<fh:tools></fh:tools>
+		</fa:hostConfig>
+		<!-- The scale of the benchmark run, the driver definition
+				  defines the number of threads for each driver scale
+				  and each driver type. -->
+		<fa:scale>50</fa:scale>
+		<!-- The rampup, steadystate, and rampdown of the driver -->
+		<fa:runControl unit="time">
+			<fa:rampUp>30</fa:rampUp>
+			<fa:steadyState>300</fa:steadyState> <!-- 5 mins -->
+			<fa:rampDown>10</fa:rampDown>
+		</fa:runControl>
+		<!-- The driver-specific config.  -->
+		<driverConfig name="UserWeb">
+			<properties>
+				<property>
+					<name>appHost</name>
+					<value>http://localhost:8092</value>
+				</property>
+				<property>
+					<name>appContext</name>
+					<value>/user-grails-client</value>
+				</property>
+			</properties>
+		</driverConfig>
+	</fa:runConfig>
+	<!--
+	<webServer>
+		<fa:hostConfig xmlns="http://faban.sunsource.net/ns/fabanharness" xmlns:fa="http://faban.sunsource.net/ns/faban">
+			<fa:hostPorts>testnscale.com:80</fa:hostPorts>
+			<enabled>false</enabled>
+			<tools>NONE</tools>
+		</fa:hostConfig>
+	</webServer>
+	-->
+</userWeb>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="2.5">
+	<!-- General description of your web application -->
+	<display-name>spring_mvc - Webapp</display-name>
+	<description>
+		Describe the spring_mvc Webapp here.
+		elberry@example.com
+
+		See http://tomcat.apache.org/tomcat-6.0-doc/appdev/web.xml.txt for more information
+		regarding this Web Descriptor File.
+	</description>
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/applicationContext.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</web-app>

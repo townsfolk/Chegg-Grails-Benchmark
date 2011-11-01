@@ -1,0 +1,30 @@
+apply plugin: 'jetty'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+group = 'com.chegg.poc'
+
+jettyRun { httpPort = 8091 }
+
+jerseyVersion = '1.6'
+springVersion = '3.0.6.RELEASE'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	providedCompile 'javax.servlet:servlet-api:2.5'
+
+	compile "cglib:cglib:2.2.2",
+			"com.sun.jersey.contribs:jersey-spring:$jerseyVersion",
+			"com.sun.jersey:jersey-bundle:$jerseyVersion",
+			"com.sun.jersey:jersey-json:$jerseyVersion",
+			"commons-beanutils:commons-beanutils:1.8.3",
+			"log4j:log4j:1.2.16",
+			"org.slf4j:slf4j-log4j12:1.6.1",
+			"org.springframework:spring-core:$springVersion",
+			"org.springframework:spring-web:$springVersion"
+
+	groovy 'org.codehaus.groovy:groovy:1.8.0'
+}

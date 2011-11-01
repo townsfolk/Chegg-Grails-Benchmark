@@ -1,0 +1,23 @@
+The CoreHttp workload provides a simple example for organizing a Faban project 
+and shows you how to write a new workload. Many components are generic to most 
+Faban projects. Use this as a good starting point to create your own workload. 
+- See license.txt for license information.
+- The 'webapp' directory contains the pages to be deployed on the server. These
+  files can be used for testing.
+- See the "How to Create a Workload" tutorial on testnscale.com for a 
+  description of the various files and directories.
+
+To build this workload, do the following :
+- Copy build.properties.template to build.properties.
+- Edit build.properties and set faban.home and faban.url.
+- Type 'ant deploy.jar'
+
+If you have Faban running on faban.url, you can then deploy as follows:
+- Type 'ant deploy'
+
+Notes:
+- Workload-specific scripts and binaries should be placed into the bin directory.
+- Any workload-specific libraries (for e.g JDBC library) should be placed in 
+  the lib directory.
+- The nbproject directory contains a Netbeans project. You can open this 
+  project if you use Netbeans IDE.
