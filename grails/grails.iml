@@ -41,17 +41,6 @@
       <library name="Grails User Library (grails)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.8.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.9.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.lowagie/itext/jars/itext-2.1.7.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.jrobin/jrobin/jars/jrobin-1.5.9.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.bull.javamelody/javamelody-core/jars/javamelody-core-1.32.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.jackson/jackson-xc/jars/jackson-xc-1.7.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.jackson/jackson-jaxrs/jars/jackson-jaxrs-1.7.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.7.1.jar!/" />
